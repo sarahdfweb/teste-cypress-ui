@@ -2,8 +2,14 @@
 
 context('Funcionalidade Login', () =>{
 
-    it('Deve fazer login com sucesso', () => {
+    before(() => {
         cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+    });
+    afterEach(() => {
+       cy.screenshot()
+    });
+
+    it('Deve fazer login com sucesso', () => {
         cy.get('#username').type('sarahdfweb@gmail.com')
         cy.get('#password').type('Yehoshua1@')
         cy.get('.woocommerce-form > .button').click();
@@ -12,18 +18,16 @@ context('Funcionalidade Login', () =>{
  
     });
 
-    it('Deve exibir uma mensagem de erro ao inserir usuário inválido  ', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
-        cy.get('#username').type('Madalena')
-        cy.get('#password').type('yehoshua')
+    it('Deve exibir uma mensagem de erro ao inserir usuário inválido', () => {
+        cy.get('#username').type('sarahdfweb@gmail.com1')
+        cy.get('#password').type('Yehoshua1@')
         cy.get('.woocommerce-form > .button').click();
         cy.get('.page-title').should('exist' , 'minha conta').wait(1000);
-        cy.get('.woocommerce-error').should('exist' , 'Erro: O usuário Madalena não está registrado neste site. Se você não está certo de seu nome de usuário, experimente o endereço de e-mail.').wait(1000);
+        cy.get('.woocommerce-error').should('exist' , 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.').wait(1000);
         
     });
 
-    it('Deve exibir uma mensagem de erro ao inserir usuário inválido  ', () => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+    it.only('Deve exibir uma mensagem de erro senha inválido  ', () => {
         cy.get('#username').type('sarahdfweb@gmail.com')
         cy.get('#password').type('yehoshua')
         cy.get('.woocommerce-form > .button').click();
