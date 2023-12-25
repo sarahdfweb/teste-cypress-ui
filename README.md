@@ -138,29 +138,36 @@ No contexto do Cypress, a biblioteca Faker.js pode ser utilizada para gerar dado
   
 >Neste teste, foi realizado o pré-cadastro de usuário com email e senha. Após o salvamento, o usuário é direcionado para a tela de alteração de dados, onde é possível modificar o nome, sobrenome. Todos esses dados são gerados pela biblioteca Faker.
   
-````
-/// <reference types="cypress"/>
-import { faker } from '@faker-js/faker';
+/// <reference types="cypress" />
+const faker = require('faker');
 
-// Cenário 01 Pré Cadastro usuário válido
-describe('Funcionalidade Pré Cadastro de usuário ', () => {
+describe('Funcionalidade Pré Cadastro', () => {
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/my-account/')
+        cy.visit('minha-conta')
+        
     });
 
-    it('Deve completar o pré cadastro com sucesso ', () => {
-        cy.get('#reg_email').type(faker.internet.email())
-        cy.get('#reg_password').type('Yefjxasajs@1')
+    it('Deve completar o Pré cadastro com sucesso', () => {
+        let nomeFaker = faker.name.firstName()
+        let sobrenomeFaker = faker.name.lastName()
+        let emailFaker = faker.internet.email()
+
+        cy.get('#reg_email').type(emailFaker)
+        cy.get('#reg_password').type('sarahdfweb@13')
         cy.get(':nth-child(4) > .button').click()
+
         cy.get('.woocommerce-MyAccount-navigation-link--edit-account > a').click()
-        cy.get('#account_first_name').type(faker.name.firstName())
-        cy.get('#account_last_name').type(faker.name.lastName())
-        cy.get('.woocommerce-Button').click()
-        cy.get('.woocommerce-message').should('contain','Detalhes da conta modificados com sucesso.')
-    });
-});
-````
-</details>
+        cy.get('#account_first_name').type(nomeFaker);
+        cy.get('#account_last_name').type(sobrenomeFaker);
+        cy.get('.woocommerce-Button').click();
+        cy.get('.woocommerce-message').should('exist', 'Detalhes da conta modificados com sucesso.')
+   
+
+        });
+        });
+    
+
+
 
 
