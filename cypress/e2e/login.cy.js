@@ -40,7 +40,7 @@ context('Funcionalidade Login', () => {
             })              
     });
 
-    it.only('Deve fazer login com sucesso - Usando comando customizado', () => {
+    it('Deve fazer login com sucesso - Usando comando customizado', () => {
         cy.login('sarahdfweb@gmail.com','Yehoshua1@')
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist', 'Olá, sarahdf').wait(1000);
         
