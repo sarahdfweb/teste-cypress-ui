@@ -7,9 +7,9 @@ context('Funcionalidade Login', () => {
         cy.visit('minha-conta')
     });
 
-    afterEach(() => {
-        cy.screenshot()
-    });
+    //afterEach(() => {
+       // cy.screenshot()
+    //});
 
     it('Deve fazer login com sucesso', () => {
         cy.get('#username').type('sarahdfweb@gmail.com')
@@ -29,16 +29,21 @@ context('Funcionalidade Login', () => {
 
     });
 
-    it.only('Deve fazer login com sucesso usando fixture', () => {
+    it('Deve fazer login com sucesso usando fixture', () => {
         cy.fixture('perfil').then(dados => {
         cy.get('#username').type(dados.usuario)
-            cy.get('#password').type(dados.senha, {log: false}) //oculta a senha
-            cy.get('.woocommerce-form > .button').click();
+        cy.get('#password').type(dados.senha, {log: false}) //oculta a senha
+        cy.get('.woocommerce-form > .button').click();
 
-            cy.get('.page-title').should('exist', 'minha conta').wait(1000);
+        cy.get('.page-title').should('exist', 'minha conta').wait(1000);
 
-            })            
-            
+            })              
+    });
+
+    it.only('Deve fazer login com sucesso - Usando comando customizado', () => {
+        cy.login('sarahdfweb@gmail.com','Yehoshua1@')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('exist', 'Olá, sarahdf').wait(1000);
+        
     });
 
     it('Deve exibir uma mensagem de erro ao inserir usuário inválido', () => {
