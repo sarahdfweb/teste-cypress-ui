@@ -134,10 +134,9 @@ No contexto do Cypress, a biblioteca Faker.js pode ser utilizada para gerar dado
 
 
 <details>
-<summary><h3>O código gerando a biblioteca Faker</h3></summary>
+<summary><h3>O código gerando a biblioteca Fake</h3></summary>
   
->Neste teste, foi realizado o pré-cadastro de usuário com email e senha. Após o salvamento, o usuário é direcionado para a tela de alteração de dados, onde é possível modificar o nome, sobrenome. Todos esses dados são gerados pela biblioteca Faker.
-  
+````
 /// <reference types="cypress" />
 const faker = require('faker');
 
@@ -165,9 +164,14 @@ describe('Funcionalidade Pré Cadastro', () => {
    
 
         });
-        });
     
+});
 
+
+````
+</details>
+  
+<h1><p align="center">Arquivo de dados </h1></p>
 
 
 
