@@ -173,5 +173,5 @@ describe('Funcionalidade Pré Cadastro', () => {
   
 <h1><p align="center">Arquivo de dados </h1></p>
 
-
+> Um "arquivo de dados" é utilizado para armazenar informações necessárias nos testes automatizados. Essas informações incluem conjuntos de dados para preencher formulários, valores de verificação após a execução de ações no aplicativo e cenários de teste variados. Ao empregar arquivos de dados, os testes tornam-se mais flexíveis e adaptáveis, permitindo a fácil modificação dos dados sem a necessidade de alterar o código do teste. Isso facilita a manutenção, reutilização e ajuste dos dados para lidar com diferentes condições de teste, proporcionando escalabilidade e eficiência na execução de testes automatizados. Por exemplo, ao testar um formulário de registro, um arquivo de dados pode conter várias combinações de informações, como nomes, endereços de e-mail e senhas, simplificando a execução de testes com conjuntos de dados diversificados.
 
