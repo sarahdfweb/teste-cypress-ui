@@ -177,3 +177,10 @@ describe('Funcionalidade Pré Cadastro', () => {
 
 <h1><p align="center">Modo Headless </h1></p>
 
+> O modo headless é eficaz para a execução de testes automatizados, que dispensa a abertura do navegador com interface gráfica. Esse método é particularmente útil em cenários de testes de esteira
+> execuções frequentes e agendamentos frequentes, otimizando o consumo de recursos computacionais, como memória, CPU e armazenamento de cache.
+
+> A execução dos testes pode ser iniciada diretamente pelo terminal do Visual Studio, utilizando o comando 'npx cypress run'. Durante a execução, o log fornece informações importantes, incluindo a versão do Cypress, o  
+> navegador em uso, a versão do Node, e registra detalhes abrangentes de cada teste contido na pasta 'e2e'. O log destaca claramente os testes que foram bem-sucedidos e aqueles que falharam, proporcionando uma visão 
+ > abrangente do status da execução."
+
