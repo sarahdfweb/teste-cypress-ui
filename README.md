@@ -1,5 +1,5 @@
 # teste-cypress-ui
-<h1><p align="center">Primeiro contato com Cypress </h1></p>
+<h1><p align="center">Testes automatizados com Cypress </h1></p>
 <p align="center">
 <img src="https://github.com/sarahdfweb/teste1cypress/assets/87348787/b396168a-0a72-4008-8281-4723be6dd508" alt="Captura de tela 2023-10-27 223423" width="500" />  
 </p>
