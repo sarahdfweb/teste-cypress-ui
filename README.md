@@ -1,8 +1,9 @@
 # teste-cypress-ui
 <h1><p align="center">Testes automatizados com Cypress </h1></p>
 <p align="center">
-<img src="https://github.com/sarahdfweb/teste1cypress/assets/87348787/b396168a-0a72-4008-8281-4723be6dd508" alt="Captura de tela 2023-10-27 223423" width="500" />  
+  <img src="https://github.com/sarahdfweb/teste-cypress-ui/assets/87348787/e338f694-0fe5-414e-89b5-c7d27b6d5c9f" width="500" />  
 </p>
+
 
 
 > Para este primeiro teste, clonei este repositório no Visual Studio com o comando `git clone`, juntamente com o link do repositório, para evitar que ficasse apenas local. No `.gitignore`ao criar o repositório, escolhi a opção "Node". Para entrar na pasta, utilizei no terminal do Visual o comando `cd teste1cypress`. Em seguida, comecei a criar meu projeto Node com o comando `npm init -y`assim iniciei o projeto Node dentro da pasta 'teste1cypress' e criou um arquivo JSON, que atua como um controlador para meus pacotes e o projeto em si. Com ele, consigo gerenciar a biblioteca Cypress, que foi instalada com o comando `npm install cypress -D` (onde '-D' indica uma dependência de desenvolvimento), também no terminal. Por fim, logo após, utilizei o comando `npx cypress open` para abrir automaticamente o painel de controle do Cypress.
