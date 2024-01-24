@@ -62,8 +62,9 @@ describe('Teste de Login', () => {
 </details>
   
 [![Assista ao vídeo] 🚀
+Nesse teste foi selecionado 4 itens no carrinho escolhendo tamanho e cor do produto, adicionado ao carrinho e preenchendo o formulário de pagamento.
 
-https://github.com/sarahdfweb/teste1cypress/assets/87348787/92f28b45-d6b0-41ec-be94-c63666798c0d
+https://github.com/sarahdfweb/ex_st_mod12/assets/87348787/717145ed-7b41-474c-9491-26fe19da8d87
 <h1><p align="center">Otimizando o código com Hook  </h1></p>
 
 >Em Cypress, um "hook" se refere a funções especiais que são executadas em diferentes 
